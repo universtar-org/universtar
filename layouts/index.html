@@ -3,7 +3,7 @@
 
   <div class="projects">
     {{ range sort .Site.Data.projects "stars" "desc" }}
-      {{ partial "project.html" . }}
+      {{ partial "project-card.html" . }}
     {{ end }}
   </div>
 {{ end }}
