@@ -1,4 +1,9 @@
 {{ define "main" }}
   <h1>Project List</h1>
-  <p>Last Update Time: {{ .Site.Data.meta.updated_at }}</p>
+
+  <div class="projects">
+    {{ range sort .Site.Data.projects "stars" "desc" }}
+      {{ partial "project.html" . }}
+    {{ end }}
+  </div>
 {{ end }}
