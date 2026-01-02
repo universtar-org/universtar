@@ -1,9 +1,17 @@
-<div>
+<div class="card">
   <h3>
-    <a href="{{ .url }}" target="_blank">{{ .repo }}</a>
-    <p>{{ .description }}</p>
-    <span>⭐ {{ .stars }}</span>
-    <span>{{ .language }}</span>
-    <span>{{ .tag }}</span>
+    <a class="repo-link" href="{{ .url }}" target="_blank">{{ .repo }}</a>
   </h3>
+  <p class="repo-description">{{ .description }}</p>
+  <span class="repo-star">⭐ {{ .stars }}</span>
+  <ul class="repo-language">
+    {{ $langs := .language }}
+    {{ if not (isset $langs 0) }}
+      {{ $langs = slice $langs }}
+    {{ end }}
+
+    {{ range $langs }}
+      <li class="lang">{{ . }}</li>
+    {{ end }}
+  </ul>
 </div>
