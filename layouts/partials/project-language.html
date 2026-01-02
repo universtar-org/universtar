@@ -1,0 +1,10 @@
+<ul class="repo-language">
+  {{ $langs := .language }}
+  {{ if not (isset $langs 0) }}
+    {{ $langs = slice $langs }}
+  {{ end }}
+
+  {{ range $langs }}
+    <li class="lang">{{ . }}</li>
+  {{ end }}
+</ul>
