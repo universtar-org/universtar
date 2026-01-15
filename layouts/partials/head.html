@@ -1,2 +1,2 @@
-{{ $style := resources.Get "scss/main.scss" | css.Sass | resources.Minify }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "transpiler" "dartsass") | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
