@@ -13,15 +13,15 @@
     devShells.${system}.default = pkgs.mkShell {
       # Add packages here.
       buildInputs = with pkgs; [
-        nodejs
         hugo
+        nodejs
       ];
 
       # Shell hooks.
       shellHook = ''
         echo "Entering the development environment!"
         hugo version
-        npm install prettier prettier-plugin-go-template
+        npm install --save-dev prettier prettier-plugin-go-template
       '';
     };
   };
