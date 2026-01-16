@@ -1,10 +1,10 @@
-<ul class="repo-language">
+<ul class="project-tag-list">
   {{ $langs := .language }}
   {{ if not (isset $langs 0) }}
     {{ $langs = slice $langs }}
   {{ end }}
 
   {{ range $langs }}
-    <li class="lang">{{ . }}</li>
+    <li class="project-tag">{{ . }}</li>
   {{ end }}
 </ul>
