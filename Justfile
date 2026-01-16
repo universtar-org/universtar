@@ -2,6 +2,10 @@ dev:
   # Start the server.
   hugo server --buildDrafts --disableFastRender
 
+gc:
+  # Clean build cache.
+  rm -rf public resources
+
 format:
   # Format code.
   prettier -w "./**/*.html" "./**/*.md"
