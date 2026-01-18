@@ -1,8 +1,12 @@
-<div class="card">
-  <h3>
-    <a class="repo-link" href="{{ .url }}" target="_blank">{{ .repo }}</a>
+<div
+  class="bg-ctp-surface0 grid grid-cols-2 gap-y-4 p-5 items-center place-items-center justify-center content-stretch rounded-lg w-1/2 shadow-ctp-crust/20 shadow-[4px_4px_4px_0]"
+>
+  <h3 class="text-lg">
+    <a href="{{ .url }}" target="_blank">{{ .repo }}</a>
   </h3>
-  <p class="repo-description">{{ .description }}</p>
-  <span class="repo-star">⭐ {{ .stars }}</span>
-  {{ partial "project-language.html" . }}
+  <span>⭐ {{ .stars }}</span>
+  <p class="text-pretty text-center wrap-anywhere text-sm text-ctp-subtext0">
+    {{ .description }}
+  </p>
+  {{ partial "project-tags.html" . }}
 </div>
