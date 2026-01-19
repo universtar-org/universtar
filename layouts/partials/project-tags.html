@@ -1,10 +1,12 @@
-<ul class="project-tag-list">
+<ul class="flex flex-wrap gap-4">
   {{ $langs := .language }}
   {{ if not (isset $langs 0) }}
     {{ $langs = slice $langs }}
   {{ end }}
 
   {{ range $langs }}
-    <li class="project-tag">{{ . }}</li>
+    <li class="bg-ctp-blue/20 text-ctp-blue p-1 rounded-2xl min-w-[60px]">
+      {{ . }}
+    </li>
   {{ end }}
 </ul>
