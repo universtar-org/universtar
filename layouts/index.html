@@ -1,9 +1,5 @@
 {{ define "main" }}
-  <h1>Project List</h1>
+  <h1 class="m-[0_0_20px_0] text-2xl">Project List</h1>
 
-  <div class="projects">
-    {{ range sort .Site.Data.projects "stars" "desc" }}
-      {{ partial "project-card.html" . }}
-    {{ end }}
-  </div>
+  {{ partial "project-list.html" . }}
 {{ end }}
