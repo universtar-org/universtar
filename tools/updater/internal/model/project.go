@@ -1,10 +1,9 @@
 package model
 
-// Tags are defined by users, and they don't need to be fetched.
-// So `tags` is not necessary in this model.
+// Username can be get from the file name, so it is unnecessary in this structure.
 type Project struct {
-	Username    string `yaml:"username"`
-	Repo        string `yaml:"repo"`
-	Stars       int    `yaml:"stars"`
-	Description string `yaml:"description"`
+	Repo        string   `yaml:"repo"`
+	Stars       int      `yaml:"stars"`
+	Description string   `yaml:"description"`
+	Tags        []string `yaml:"tags"`
 }
