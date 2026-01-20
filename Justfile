@@ -13,3 +13,9 @@ format:
 new path:
   # Create new content.
   hugo new content {{path}}
+
+update:
+  # Update data.
+  cd ./tools/updater && \
+  go run ./cmd/updater/main.go ../../data/projects ; \
+  cd - > /dev/null
