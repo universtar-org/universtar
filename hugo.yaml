@@ -1,6 +1,6 @@
 baseURL: "https://example.org/"
 languageCode: "en-us"
-title: "My New Hugo Site"
+title: "Universtar"
 
 build:
   buildStats:
@@ -21,3 +21,4 @@ module:
 
 params:
   heroTitle: "Universtar"
+  repoLink: "https://github.com/universtar-org/universtar"
