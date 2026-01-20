@@ -13,6 +13,8 @@
     devShells.${system}.default = pkgs.mkShell {
       # Add packages here.
       buildInputs = with pkgs; [
+        go
+        gotools
         hugo
         nodejs
       ];
