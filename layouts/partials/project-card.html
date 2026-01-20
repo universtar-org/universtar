@@ -3,17 +3,19 @@
 >
   <h3 class="text-lg">
     <a
-      href="{{ .url }}"
+      href="https://github.com/{{ .author }}/{{ .repo }}"
       class="hover:text-ctp-blue hover:underline"
       target="_blank"
-      >{{ .repo }}</a
+      >{{ .author }}/{{ .repo }}</a
     >
   </h3>
   <p class="text-pretty wrap-anywhere text-sm text-ctp-subtext0 text-left">
     {{ .description }}
   </p>
   <div class="flex gap-8 justify-between w-full">
-    <span class="select-none mt-auto">⭐ {{ .stars }}</span>
-    {{ partial "project-tags.html" . }}
+    <span class="select-none mt-auto">⭐ {{ default 0 .stars }}</span>
+    {{ if .tags }}
+      {{ partial "project-tags.html" . }}
+    {{ end }}
   </div>
 </div>
