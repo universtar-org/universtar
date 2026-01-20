@@ -6,10 +6,10 @@
   <body
     class="text-ctp-text bg-ctp-base text-center overflow-x-hidden max-w-full"
   >
-    {{ partial "header.html" }}
+    {{ partial "header.html" . }}
     <main class="px-4 py-12 mx-auto w-full max-w-3xl">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer.html" }}
+    {{ partial "footer.html" . }}
   </body>
 </html>
