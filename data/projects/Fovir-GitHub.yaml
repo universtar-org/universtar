@@ -1,0 +1,7 @@
+- repo: FovirWorkshop
+  tags:
+    - NixOS
+
+- repo: thunder-fighter
+  tags:
+    - Java
