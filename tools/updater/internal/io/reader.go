@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func readYaml(path string) ([]model.Project, error) {
+func ReadYaml(path string) ([]model.Project, error) {
 	var projects []model.Project
 	data, err := os.ReadFile(path)
 
