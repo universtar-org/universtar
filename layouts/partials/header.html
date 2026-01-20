@@ -4,10 +4,14 @@
   <a href="{{ .Site.BaseURL }}">
     <span>{{ .Site.Title }}</span>
   </a>
-  <a
-    href="{{ .Site.Params.repoLink }}"
-    target="_blank"
-    class="text-ctp-lavender"
-    >{{ partial "icon.html" "github" }}</a
-  >
+
+  <div class="flex gap-8">
+    {{ partial "theme-switcher.html" . }}
+    <a
+      href="{{ .Site.Params.repoLink }}"
+      target="_blank"
+      class="text-ctp-lavender"
+      >{{ partial "icon.html" "github" }}</a
+    >
+  </div>
 </header>
