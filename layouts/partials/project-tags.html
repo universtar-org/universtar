@@ -1,10 +1,10 @@
 <ul class="flex flex-wrap gap-4">
-  {{ $langs := .language }}
-  {{ if not (isset $langs 0) }}
-    {{ $langs = slice $langs }}
+  {{ $tags := .tags }}
+  {{ if not (isset $tags 0) }}
+    {{ $tags = slice $tags }}
   {{ end }}
 
-  {{ range $langs }}
+  {{ range $tags }}
     <li class="bg-ctp-blue/20 text-ctp-blue p-1 rounded-2xl min-w-[60px]">
       {{ . }}
     </li>

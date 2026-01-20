@@ -4,7 +4,7 @@
     "url": "https://github.com/alice/demo",
     "description": "AI chatbot project for students",
     "stars": 123,
-    "language": ["Python", "C++"],
+    "tags": ["Python", "C++"],
     "updated_at": "2026-01-02T10:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "url": "https://github.com/bob/web-portfolio",
     "description": "Personal web portfolio website",
     "stars": 87,
-    "language": "HTML",
+    "tags": "HTML",
     "updated_at": "2026-01-01T08:30:00Z"
   },
   {
@@ -20,7 +20,31 @@
     "url": "https://github.com/carol/ml-toolkit",
     "description": "This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description.",
     "stars": 65,
-    "language": "Go",
+    "tags": "Go",
+    "updated_at": "2026-01-01T12:15:00Z"
+  },
+  {
+    "repo": "alice/demo",
+    "url": "https://github.com/alice/demo",
+    "description": "AI chatbot project for students",
+    "stars": 123,
+    "tags": ["Python", "C++"],
+    "updated_at": "2026-01-02T10:00:00Z"
+  },
+  {
+    "repo": "bob/web-portfolio",
+    "url": "https://github.com/bob/web-portfolio",
+    "description": "Personal web portfolio website",
+    "stars": 87,
+    "tags": "HTML",
+    "updated_at": "2026-01-01T08:30:00Z"
+  },
+  {
+    "repo": "carol/ml-toolkit",
+    "url": "https://github.com/carol/ml-toolkit",
+    "description": "This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description.",
+    "stars": 65,
+    "tags": "Go",
     "updated_at": "2026-01-01T12:15:00Z"
   }
 ]
