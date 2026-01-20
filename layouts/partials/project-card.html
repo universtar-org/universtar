@@ -10,10 +10,10 @@
     >
   </h3>
   <p class="text-pretty wrap-anywhere text-sm text-ctp-subtext0 text-left">
-    {{ .description }}
+    {{ .description | default .Site.Params.project.defaultDescription }}
   </p>
   <div class="flex gap-8 justify-between w-full">
-    <span class="select-none mt-auto">⭐ {{ default 0 .stars }}</span>
+    <span class="select-none mt-auto">⭐ {{ .stars | default 0 }}</span>
     {{ if .tags }}
       {{ partial "project-tags.html" . }}
     {{ end }}

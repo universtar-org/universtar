@@ -6,6 +6,9 @@ params:
   heroTitle: "Universtar"
   repoLink: "https://github.com/universtar-org/universtar"
 
+  project:
+    defaultDescription: "No description provided."
+
 build:
   buildStats:
     enable: true
