@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4 items-center w-full">
+<div class="flex flex-col gap-6 items-center w-full">
   {{ range sort .Site.Data.projects "stars" "desc" }}
     {{ partial "project-card.html" . }}
   {{ end }}
