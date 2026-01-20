@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1 class="m-[0_0_20px_0] text-2xl">Project List</h1>
+  <h1 class="m-[0_0_20px_0] text-2xl">{{ .Site.Params.heroTitle }}</h1>
 
   {{ partial "project-list.html" . }}
 {{ end }}
