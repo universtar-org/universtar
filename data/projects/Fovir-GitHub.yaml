@@ -1,7 +1,10 @@
 - repo: FovirWorkshop
+  stars: 0
+  description: My NixOS configurations.
   tags:
     - NixOS
-
 - repo: thunder-fighter
+  stars: 5
+  description: A classical game based on JavaFX.
   tags:
     - Java
