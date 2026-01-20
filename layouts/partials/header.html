@@ -1,0 +1,11 @@
+<header class="flex justify-between items-center px-4 bg-ctp-mantle h-16">
+  <a href="{{ .Site.BaseURL }}">
+    <span>{{ .Site.Title }}</span>
+  </a>
+  <a
+    href="{{ .Site.Params.repoLink }}"
+    target="_blank"
+    class="text-ctp-lavender"
+    >{{ partial "icon.html" "github" }}</a
+  >
+</header>
