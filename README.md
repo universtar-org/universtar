@@ -29,3 +29,12 @@ Otherwise, you may [open an issue](https://github.com/universtar-org/universtar/
 Everyone is welcome to contribute to this project. For those who want to contribute, please kindly refer to the [`CONTRIBUTING.md`](https://github.com/universtar-org/universtar?tab=contributing-ov-file) and follow the guideline.
 
 ## Acknowledgement
+
+This project is built with the help of several execellent open-source tools and frameworks, including:
+
+- [Go](https://github.com/golang/go) for tooling
+- [Hugo](https://github.com/gohugoio/hugo) for static site generation
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styling
+- [Catppuccin](https://github.com/catppuccin/catppuccin) for color palette
+
+Special thanks to the open-source community for making these tools freely available.
