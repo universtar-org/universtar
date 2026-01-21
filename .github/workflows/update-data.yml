@@ -10,6 +10,9 @@ permissions:
   contents: write
 
 jobs:
+  check-format:
+    uses: ./.github/workflows/check-yaml-format.yml
+
   update-data:
     runs-on: ubuntu-latest
 
