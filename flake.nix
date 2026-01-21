@@ -17,6 +17,7 @@
         gotools
         hugo
         nodejs
+        yq
       ];
 
       # Shell hooks.

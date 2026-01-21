@@ -19,3 +19,7 @@ update:
   cd ./tools/updater && \
   go run ./cmd/updater/main.go ../../data/projects ; \
   cd - > /dev/null
+
+check:
+  # Check YAML.
+  find ./data/projects -type f \( -name '*.yml' -o -name '*.yaml' \) -exec yq '.' {} \;
