@@ -30,7 +30,7 @@ Everyone is welcome to contribute to this project. For those who want to contrib
 
 ## Acknowledgement
 
-This project is built with the help of several execellent open-source tools and frameworks, including:
+This project is built with the help of several excellent open-source tools and frameworks, including:
 
 - [Go](https://github.com/golang/go) for tooling
 - [Hugo](https://github.com/gohugoio/hugo) for static site generation
