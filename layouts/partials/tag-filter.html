@@ -1,3 +1,5 @@
+{{ $defaultColor := "overlay2" }}
+{{ $tagStyle := "select-none cursor-pointer" }}
 {{ $allTags := slice }}
 {{ range $username, $repos := .Site.Data.projects }}
   {{ range $repos }}
@@ -10,8 +12,16 @@
 
 <div class="my-8">
   <ul class="flex gap-1">
+    <label for="all" data-tag="All" class="select-all-tags">
+      <input type="checkbox" class="hidden" id="all" />
+      {{ partial "tag.html" (dict "tag" "All" "color" $defaultColor "extraStyle" $tagStyle) }}
+    </label>
+
     {{ range $allTags }}
-      <li data-tag="{{ . }}">{{ partial "tag.html" . }}</li>
+      <label for="{{ . }}" class="tag-filter" data-tag="{{ . }}">
+        <input type="checkbox" class="hidden" id="{{ . }}" />
+        {{ partial "tag.html" (dict "tag" . "color" $defaultColor "extraStyle" $tagStyle) }}
+      </label>
     {{ end }}
   </ul>
 </div>
