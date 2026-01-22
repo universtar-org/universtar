@@ -9,7 +9,11 @@ params:
   project:
     defaultDescription: "No description provided."
 
+taxonomies:
+  tag: "tags"
+
 build:
+  noJSConfigInAssets: true
   buildStats:
     enable: true
   cachebusters:
