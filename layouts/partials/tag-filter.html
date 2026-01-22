@@ -1,0 +1,21 @@
+{{ $allTags := slice }}
+{{ range $username, $repos := .Site.Data.projects }}
+  {{ range $repos }}
+    {{ range .tags }}
+      {{ $allTags = $allTags | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+<div class="my-8">
+  <ul class="flex gap-1">
+    {{ range $allTags }}
+      <li>
+        <a href="/tags/{{ . | urlize }}/">
+          {{ partial "tag.html" . }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
