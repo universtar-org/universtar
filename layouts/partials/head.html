@@ -2,7 +2,7 @@
   {{ partial "css.html" . }}
 {{ end }}
 
-{{ with resources.Get "js/main.js" }}
+{{ with resources.Get "ts/main.ts" }}
   {{ $opts := dict
     "minify" (not hugo.IsDevelopment)
     "sourceMap" (cond hugo.IsDevelopment "external" "")
