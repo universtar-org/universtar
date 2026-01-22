@@ -1,15 +1,12 @@
 const root = document.documentElement;
-const checkbox = document.getElementById("checkbox-theme");
+const checkbox = document.getElementById(
+  "checkbox-theme",
+) as HTMLInputElement | null;
 const THEME_KEY = "theme";
 const lightTheme = "latte";
 const darkTheme = "mocha";
 
-/**
- * Apply a theme.
- *
- * @param {string} theme - Theme to be setted
- */
-function applyTheme(theme) {
+function applyTheme(theme: string) {
   if (theme !== lightTheme && theme !== darkTheme) {
     return;
   }
@@ -21,11 +18,6 @@ function applyTheme(theme) {
   }
 }
 
-/**
- * Get user's preferred theme by querying `localStorage` or querying `prefers-color-scheme`.
- *
- * @returns {string} - Preferred theme
- */
 function getPreferredTheme() {
   const saved = localStorage.getItem(THEME_KEY);
   if (saved === lightTheme || saved === darkTheme) {
@@ -37,7 +29,6 @@ function getPreferredTheme() {
     : lightTheme;
 }
 
-// Event register.
 document.addEventListener("DOMContentLoaded", () => {
   const theme = getPreferredTheme();
   applyTheme(theme);
