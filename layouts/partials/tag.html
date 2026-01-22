@@ -1,5 +1,10 @@
+{{ $tag:= .tag }}
+{{ $color := .color | default "blue" }}
+{{ $extraStyle := .extraStyle | default "" }}
+
+
 <div
-  class="bg-ctp-blue/20 text-ctp-blue text-xs px-4 py-1 rounded-2xl transition-all duration-200 ease-out shadow-sm hover:shadow-lg hover:-translate-y-1"
+  class="bg-ctp-{{ $color }}/20 text-ctp-{{ $color }} text-xs px-4 py-1 rounded-2xl transition-all duration-200 ease-out shadow-sm hover:shadow-lg hover:-translate-y-1 tag {{ $extraStyle }}"
 >
-  {{ . }}
+  {{ $tag }}
 </div>
