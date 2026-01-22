@@ -11,11 +11,7 @@
 <div class="my-8">
   <ul class="flex gap-1">
     {{ range $allTags }}
-      <li>
-        <a href="/tags/{{ . | urlize }}/">
-          {{ partial "tag.html" . }}
-        </a>
-      </li>
+      <li data-tag="{{ . }}">{{ partial "tag.html" . }}</li>
     {{ end }}
   </ul>
 </div>
