@@ -1,3 +1,11 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 @import "@catppuccin/tailwindcss/mocha.css";
+
+.tag-filter-selected {
+  @apply bg-ctp-maroon/20 text-ctp-maroon;
+}
+
+.tag-filter-normal {
+  @apply bg-ctp-rosewater/20 text-ctp-rosewater;
+}
