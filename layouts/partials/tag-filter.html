@@ -1,4 +1,4 @@
-{{ $tagStyle := "select-none cursor-pointer" }}
+{{ $tagStyle := "select-none cursor-pointer text-nowrap" }}
 {{ $allTags := slice }}
 {{ range $username, $repos := .Site.Data.projects }}
   {{ range $repos }}
@@ -9,7 +9,7 @@
 {{ end }}
 
 
-<div class="my-8">
+<div class="my-8 pb-4 pt-2 max-w-full overflow-x-scroll">
   <ul class="flex gap-1">
     <label for="all" data-tag="All" class="select-all-tags">
       <input type="checkbox" class="hidden" id="all" />
