@@ -1,11 +1,4 @@
-const color2ctp = (color: string): readonly [string, string] => [
-  `bg-ctp-${color}/20`,
-  `text-ctp-${color}`,
-];
-const selectedColor = color2ctp("overlay0");
-const normalColor = color2ctp("overlay2");
 const hiddenClass = "hidden";
-
 const showAllTag = document.querySelector<HTMLElement>(".select-all-tags");
 const tagFilters = document.querySelectorAll<HTMLElement>(".tag-filter");
 const projectCards = document.querySelectorAll<HTMLElement>(".project-card");
@@ -18,12 +11,14 @@ function setTagStyle(tagFilter: HTMLElement, selected: boolean) {
     return;
   }
 
+  const selectedStyleClass = "tag-filter-selected";
+  const normalStyleClass = "tag-filter-normal";
   if (selected) {
-    tagDiv.classList.remove(...normalColor);
-    tagDiv.classList.add(...selectedColor);
+    tagDiv.classList.remove(normalStyleClass);
+    tagDiv.classList.add(selectedStyleClass);
   } else {
-    tagDiv.classList.remove(...selectedColor);
-    tagDiv.classList.add(...normalColor);
+    tagDiv.classList.remove(selectedStyleClass);
+    tagDiv.classList.add(normalStyleClass);
   }
 }
 
@@ -78,6 +73,7 @@ showAllTag?.addEventListener("change", () => {
   if (checkbox.checked) {
     activeTags.clear();
     activeTags.add("All");
+    setTagStyle(showAllTag, true);
 
     tagFilters.forEach((tagFilter) => {
       const cb = tagFilter.querySelector<HTMLInputElement>("input");
