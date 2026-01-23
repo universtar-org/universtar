@@ -5,6 +5,6 @@
   {{ end }}
 
   {{ range $tags }}
-    <li>{{ partial "tag.html" (dict "tag" .) }}</li>
+    <li>{{ partial "tag.html" (dict "tag" . "color" "blue") }}</li>
   {{ end }}
 </ul>
