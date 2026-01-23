@@ -2,7 +2,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^1.0.0",
     "@tailwindcss/cli": "^4.1.18",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "^4.1.18"
   }
