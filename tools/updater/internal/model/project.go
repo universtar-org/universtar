@@ -6,4 +6,5 @@ type Project struct {
 	Stars       int      `yaml:"stars"`
 	Description string   `yaml:"description"`
 	Tags        []string `yaml:"tags"`
+	UpdatedAt   string   `yaml:"updated_at"`
 }

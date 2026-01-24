@@ -32,6 +32,7 @@ func Update(client *api.Client, ctx context.Context, path string) error {
 		}
 		projects[i].Description = repo.Description
 		projects[i].Stars = repo.Stars
+		projects[i].UpdatedAt = repo.UpdatedAt
 		projects[i].Tags = tag_list
 	}
 

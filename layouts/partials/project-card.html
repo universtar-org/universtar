@@ -14,7 +14,10 @@
     {{ .description | default .Site.Params.project.defaultDescription }}
   </p>
   <div class="flex gap-8 justify-between w-full">
-    <span class="select-none mt-auto">⭐ {{ .stars | default 0 }}</span>
+    <div class="flex flex-nowrap gap-4 text-nowrap items-center">
+      <span class="select-none">⭐ {{ .stars | default 0 }}</span>
+      <span>Updated on: {{ (.updated_at | time).Format "2006-01-02" }}</span>
+    </div>
     {{ if .tags }}
       {{ partial "project-tags.html" . }}
     {{ end }}
