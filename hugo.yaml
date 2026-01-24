@@ -1,16 +1,12 @@
-baseURL: "https://example.org/"
+baseURL: "https://universtar.org"
 languageCode: "en-us"
 title: "Universtar"
 
 params:
   heroTitle: "Universtar"
   repoLink: "https://github.com/universtar-org/universtar"
-
   project:
     defaultDescription: "No description provided."
-
-taxonomies:
-  tag: "tags"
 
 build:
   noJSConfigInAssets: true
