@@ -10,6 +10,7 @@ type Repo struct {
 	Description string   `json:"description"`
 	Stars       int      `json:"stargazers_count"`
 	Tags        []string `json:"topics"`
+	Language    string   `json:"language"`
 }
 
 // GetRepo Get repo information including description, number of stars, etc., via GitHub API.
