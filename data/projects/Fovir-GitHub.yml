@@ -2,9 +2,12 @@
   stars: 5
   description: A classical game based on JavaFX.
   tags:
-  - JavaFX
-  - Game
+  - Java
 - repo: FovirWorkspace
   stars: 0
   description: My NixOS configurations.
-  tags: []
+  tags:
+  - Nix
+  - clan
+  - nix-flake
+  - nixos
