@@ -3,6 +3,7 @@
   description: A classical game based on JavaFX.
   tags:
   - Java
+  updated_at: "2025-12-30T12:10:55Z"
 - repo: FovirWorkspace
   stars: 0
   description: My NixOS configurations.
@@ -11,3 +12,4 @@
   - clan
   - nix-flake
   - nixos
+  updated_at: "2026-01-24T09:35:16Z"
