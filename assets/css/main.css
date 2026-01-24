@@ -9,3 +9,9 @@
 .tag-filter-normal {
   @apply bg-ctp-rosewater/20 text-ctp-rosewater;
 }
+
+@layer base {
+  a {
+    @apply hover:text-ctp-blue hover:underline;
+  }
+}
