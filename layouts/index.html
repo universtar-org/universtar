@@ -1,7 +1,7 @@
 {{ define "main" }}
   <h1 class="my-8 text-2xl">{{ .Site.Params.heroTitle }}</h1>
 
-  {{ partial "tag-filter.html" . }}
+  {{ partial "filter-bar.html" . }}
 
   {{ partial "project-list.html" . }}
 {{ end }}
