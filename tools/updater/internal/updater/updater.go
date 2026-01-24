@@ -11,6 +11,7 @@ import (
 
 // Update a file/user.
 func Update(client *api.Client, ctx context.Context, path string) error {
+	const MAX_TAG_NUMBER = 5
 	base := filepath.Base(path)
 	owner := strings.TrimSuffix(base, filepath.Ext(base))
 
@@ -24,9 +25,14 @@ func Update(client *api.Client, ctx context.Context, path string) error {
 		if err != nil {
 			return err
 		}
+
+		tag_list := append([]string{repo.Language}, repo.Tags...)
+		if len(tag_list) > MAX_TAG_NUMBER {
+			tag_list = tag_list[:MAX_TAG_NUMBER]
+		}
 		projects[i].Description = repo.Description
 		projects[i].Stars = repo.Stars
-		projects[i].Tags = repo.Tags
+		projects[i].Tags = tag_list
 	}
 
 	io.WriteYaml(projects, path)
