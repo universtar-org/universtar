@@ -1,4 +1,5 @@
 {{ $tagStyle := "select-none cursor-pointer text-nowrap" }}
+
 {{ $allTags := slice }}
 {{ range $username, $repos := .Site.Data.projects }}
   {{ range $repos }}
@@ -7,6 +8,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
+{{ $allTags = $allTags | uniq | sort }}
 
 
 <div class="my-8 pb-4 pt-2 max-w-full overflow-x-scroll">
