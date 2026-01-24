@@ -26,6 +26,7 @@ func Update(client *api.Client, ctx context.Context, path string) error {
 		}
 		projects[i].Description = repo.Description
 		projects[i].Stars = repo.Stars
+		projects[i].Tags = repo.Tags
 	}
 
 	io.WriteYaml(projects, path)

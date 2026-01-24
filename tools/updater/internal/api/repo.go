@@ -7,8 +7,9 @@ import (
 )
 
 type Repo struct {
-	Description string `json:"description"`
-	Stars       int    `json:"stargazers_count"`
+	Description string   `json:"description"`
+	Stars       int      `json:"stargazers_count"`
+	Tags        []string `json:"topics"`
 }
 
 // GetRepo Get repo information including description, number of stars, etc., via GitHub API.
