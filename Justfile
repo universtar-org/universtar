@@ -1,6 +1,6 @@
 dev:
   # Start the server.
-  hugo server --buildDrafts --disableFastRender --config dev.yaml
+  hugo server --buildDrafts --disableFastRender
 
 gc:
   # Clean build cache.
