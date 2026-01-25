@@ -1,0 +1,12 @@
+<select id="language-switcher" class="text-base pr-2">
+  {{ range .Site.Languages }}
+    <option
+      value="{{ cond .IsDefault "/" (.Lang | relLangURL) }}"
+      {{ if eq $.Site.Language.Lang .Lang }}
+        selected
+      {{ end }}
+    >
+      {{ .LanguageName }}
+    </option>
+  {{ end }}
+</select>

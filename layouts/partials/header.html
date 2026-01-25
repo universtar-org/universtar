@@ -6,6 +6,9 @@
   </a>
 
   <div class="flex gap-8">
+    {{ if hugo.IsMultilingual }}
+      {{ partial "language-switcher.html" . }}
+    {{ end }}
     {{ partial "theme-switcher.html" . }}
     <a
       href="{{ .Site.Params.repoLink }}"
