@@ -14,4 +14,8 @@
   a {
     @apply hover:text-ctp-blue hover:underline;
   }
+
+  html:lang(zh) {
+    @apply text-base;
+  }
 }
