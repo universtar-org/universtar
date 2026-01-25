@@ -1,6 +1,7 @@
 baseURL: "https://universtar.org"
 languageCode: "en"
 title: "Universtar"
+theme: "universtar"
 
 params:
   heroTitle: "Universtar"
