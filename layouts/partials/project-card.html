@@ -15,7 +15,10 @@
   <div class="flex gap-8 justify-between w-full">
     <div class="flex flex-nowrap gap-4 text-nowrap items-center">
       <span class="select-none">⭐ {{ .stars | default 0 }}</span>
-      <span>Updated on: {{ (.updated_at | time).Format "2006-01-02" }}</span>
+      <span
+        >{{ i18n "updateOn" }}:
+        {{ (.updated_at | time).Format "2006-01-02" }}</span
+      >
     </div>
     {{ if .tags }}
       {{ partial "project-tags.html" . }}

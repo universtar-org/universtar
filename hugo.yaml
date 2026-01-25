@@ -1,5 +1,5 @@
 baseURL: "https://universtar.org"
-languageCode: "en-us"
+languageCode: "en"
 title: "Universtar"
 
 params:
@@ -7,6 +7,12 @@ params:
   repoLink: "https://github.com/universtar-org/universtar"
   project:
     defaultDescription: "No description provided."
+
+languages:
+  en:
+    languageName: English
+  zh:
+    languageName: "中文"
 
 build:
   noJSConfigInAssets: true

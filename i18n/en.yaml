@@ -1,0 +1,14 @@
+builtWith:
+  other: "Built with"
+
+sortBy:
+  other: "Sort by"
+
+stars:
+  other: "Stars"
+
+updateTime:
+  other: "Update Time"
+
+updateOn:
+  other: "Update on"
