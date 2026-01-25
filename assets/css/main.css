@@ -15,6 +15,10 @@
     @apply hover:text-ctp-blue hover:underline;
   }
 
+  select {
+    @apply cursor-pointer;
+  }
+
   html:lang(zh) {
     @apply text-base;
   }
