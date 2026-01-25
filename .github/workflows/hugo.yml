@@ -64,7 +64,7 @@ jobs:
         run: |
           if [ -d "exampleSite" ] && [ -f "exampleSite/hugo.yaml" ]; then
             hugo \
-              --config exampleSite/hugo.yaml \
+              --config dev.yaml \
               --minify
           else
             hugo \
