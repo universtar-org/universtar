@@ -17,7 +17,7 @@ new path:
 update:
   # Update data.
   cd ./tools/updater && \
-  go run ./cmd/updater/main.go ../../data/projects ; \
+  go run ./cmd/updater/main.go ../../data/projects || exit 1 ; \
   cd - > /dev/null
 
 check:
