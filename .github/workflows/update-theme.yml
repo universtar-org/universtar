@@ -23,6 +23,11 @@ jobs:
         run: |
           git submodule update --init --recursive --remote
 
+      - name: Update files
+        run: |
+          cp -r ./themes/universtar/.github/workflows ./.github/workflows
+          cp -ar ./themes/universtar/exampleSite/. .
+
       - name: Check for changes
         id: check_changes
         run: |
