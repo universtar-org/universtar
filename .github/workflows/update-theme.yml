@@ -21,15 +21,22 @@ jobs:
 
       - name: Update submodule
         run: |
-          git submodule update --remote --recursive
+          git submodule update --init --recursive --remote
 
-      - name: Commit Changes
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes"
+          fi
+
+      - name: Commit and Push Changes
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git add themes/universtar
           git commit -m "github-actions[bot]: update the theme"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          git push
