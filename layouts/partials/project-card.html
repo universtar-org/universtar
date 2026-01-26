@@ -12,8 +12,8 @@
   <p class="text-pretty wrap-anywhere text-ctp-subtext0 text-left">
     {{ .description | default .Site.Params.project.defaultDescription }}
   </p>
-  <div class="flex gap-8 justify-between w-full">
-    <div class="flex flex-nowrap gap-4 text-nowrap items-center">
+  <div class="flex gap-4 justify-between w-full flex-wrap">
+    <div class="flex flex-wrap gap-4 text-wrap items-center">
       <span class="select-none">⭐ {{ .stars | default 0 }}</span>
       <span
         >{{ i18n "updateOn" }}:
