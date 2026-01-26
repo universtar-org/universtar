@@ -20,13 +20,13 @@ This project aims to provide a platform for university students to showcase and 
 
 ## Submit Your Project
 
-If your institution has been added, please kindly refer to the [`docs/submit-project.md`](https://github.com/universtar-org/universtar/blob/main/docs/submit-project.md).
+If your institution has been added, please kindly refer to the [`docs/submit-project.md`](docs/submit-project.md).
 
 Otherwise, you may [open an issue](https://github.com/universtar-org/universtar/issues/new?template=instituion-request.md) to provide information of your school so that maintainers could add your institution.
 
 ## Development
 
-Everyone is welcome to contribute to this project. For those who want to contribute, please kindly refer to the [`CONTRIBUTING.md`](https://github.com/universtar-org/universtar?tab=contributing-ov-file) and follow the guideline.
+Everyone is welcome to contribute to this project. For those who want to contribute, please kindly refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) and follow the guideline.
 
 ## Acknowledgement
 
