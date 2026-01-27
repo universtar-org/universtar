@@ -2,6 +2,11 @@ baseURL: "https://demo.universtar.org"
 languageCode: "en"
 title: "Universtar"
 
+outputs:
+  home:
+    - HTML
+    - JSON
+
 params:
   heroTitle: "Universtar"
   repoLink: "https://github.com/universtar-org/universtar"
@@ -15,7 +20,6 @@ languages:
     languageName: "中文"
 
 build:
-  writeStats: true
   noJSConfigInAssets: true
   buildStats:
     enable: true
