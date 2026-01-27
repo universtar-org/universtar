@@ -1,0 +1,21 @@
+[
+{{- $projects := slice -}}
+{{- range $author, $repos := .Site.Data.projects }}
+  {{- range $repos }}
+    {{- $project := merge . (dict "author" $author) }}
+    {{- $projects = $projects | append $project -}}
+  {{- end }}
+{{- end }}
+
+{{- range $i, $project := $projects }}
+  {
+    "id": "{{ printf "%s/%s" $project.author $project.repo }}",
+    "author": "{{ $project.author }}",
+    "repo": "{{ $project.repo }}",
+    "description": {{ $project.description | jsonify }},
+    "tags": {{ $project.tags | jsonify }},
+    "stars": {{ $project.stars }},
+    "updated_at": "{{ $project.updated_at }}"
+  }{{ if ne (add $i 1) (len $projects) }},{{ end }}
+{{- end }}
+]

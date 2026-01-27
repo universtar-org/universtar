@@ -3,6 +3,11 @@ languageCode: "en"
 title: "Universtar"
 theme: "universtar"
 
+outputs:
+  home:
+    - HTML
+    - JSON
+
 params:
   heroTitle: "Universtar"
   repoLink: "https://github.com/universtar-org/universtar"
