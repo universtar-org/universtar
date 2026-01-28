@@ -1,4 +1,7 @@
-<div class="flex flex-wrap w-full gap-4 justify-between">
-  {{ partial "tag-filter.html" . }}
-  {{ partial "sort-selector.html" . }}
+<div class="flex flex-col w-full gap-4">
+  {{ partial "search-box.html" . }}
+  <div class="flex flex-wrap w-full gap-4 justify-between">
+    {{ partial "tag-filter.html" . }}
+    {{ partial "sort-selector.html" . }}
+  </div>
 </div>
