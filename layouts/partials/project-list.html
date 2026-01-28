@@ -1,8 +1,14 @@
 <div class="flex flex-col flex-1 gap-6 items-center w-full project-list">
+  {{ $allProjects := slice }}
+
   {{ range $author, $repos := .Site.Data.projects }}
     {{ range $repos }}
       {{ $project := merge . (dict "author" $author "Site" $.Site) }}
-      {{ partial "project-card.html" $project }}
+      {{ $allProjects = $allProjects | append $project }}
     {{ end }}
+  {{ end }}
+
+  {{ range sort $allProjects "stars" "desc" }}
+    {{ partial "project-card.html" . }}
   {{ end }}
 </div>
