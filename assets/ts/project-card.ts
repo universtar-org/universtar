@@ -1,3 +1,5 @@
+import { HIDDEN_CLASS } from "./constants";
+
 export let projectList: HTMLElement | null;
 export let projectCards: HTMLDivElement[] = [];
 
@@ -37,4 +39,13 @@ export function initProjects() {
   projectCards = Array.from(
     projectList?.querySelectorAll<HTMLDivElement>(".project-card"),
   );
+}
+
+export function updateProjectCards(activeTags: Set<string>) {
+  projectCards.forEach((card) => {
+    const tags = (card.dataset.tags ?? "").split(",");
+    const shouldShow =
+      activeTags.has("All") || tags.some((tag) => activeTags.has(tag));
+    card.classList.toggle(HIDDEN_CLASS, !shouldShow);
+  });
 }

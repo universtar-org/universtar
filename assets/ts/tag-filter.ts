@@ -1,6 +1,5 @@
-import { projectCards } from "./project-card";
+import { updateProjectCards } from "./project-card";
 
-const hiddenClass = "hidden";
 const showAllTag = document.querySelector<HTMLElement>(".select-all-tags");
 const tagFilters = document.querySelectorAll<HTMLElement>(".tag-filter");
 
@@ -21,15 +20,6 @@ function setTagStyle(tagFilter: HTMLElement, selected: boolean) {
     tagDiv.classList.remove(selectedStyleClass);
     tagDiv.classList.add(normalStyleClass);
   }
-}
-
-function updateProjectCards() {
-  projectCards.forEach((card) => {
-    const tags = (card.dataset.tags ?? "").split(",");
-    const shouldShow =
-      activeTags.has("All") || tags.some((tag) => activeTags.has(tag));
-    card.classList.toggle(hiddenClass, !shouldShow);
-  });
 }
 
 export function initTagFilter() {
@@ -72,7 +62,7 @@ export function initTagFilter() {
         }
       }
 
-      updateProjectCards();
+      updateProjectCards(activeTags);
     });
   });
 
@@ -97,6 +87,6 @@ export function initTagFilter() {
       });
     }
 
-    updateProjectCards();
+    updateProjectCards(activeTags);
   });
 }
