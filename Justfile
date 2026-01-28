@@ -1,10 +1,10 @@
 dev:
   # Start the server.
-  hugo server --buildDrafts --disableFastRender --source exampleSite --themesDir ../..
+  hugo server --config ./dev.yaml --disableFastRender
 
 gc:
   # Clean build cache.
-  rm -rf public resources
+  rm -rf public resources ./hugo_stats.json
 
 format:
   # Format code.
