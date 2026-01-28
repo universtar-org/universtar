@@ -12,3 +12,9 @@ updateTime:
 
 updateOn:
   other: "最后更新"
+
+searchPlaceholder:
+  other: "搜索"
+
+searchClearButton:
+  other: "清除"

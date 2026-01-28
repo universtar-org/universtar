@@ -12,3 +12,9 @@ updateTime:
 
 updateOn:
   other: "Update on"
+
+searchPlaceholder:
+  other: "Search"
+
+searchClearButton:
+  other: "Clear"
