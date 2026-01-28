@@ -9,6 +9,13 @@
     {{ if hugo.IsMultilingual }}
       {{ partial "language-switcher.html" . }}
     {{ end }}
+
+    {{ with .OutputFormats.Get "rss" }}
+      <a href="{{ .Permalink }}" target="_blank">
+        {{ partial "icon.html" "rss" }}
+      </a>
+    {{ end }}
+
     {{ partial "theme-switcher.html" . }}
     <a
       href="{{ .Site.Params.repoLink }}"
