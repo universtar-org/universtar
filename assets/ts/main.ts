@@ -1,4 +1,11 @@
-import "./sorter";
-import "./switch-language";
-import "./switch-theme";
-import "./tag-filter";
+import { initProjects } from "./project-card";
+import { initSortSelector } from "./sorter";
+import { initLanguageSwitcher } from "./switch-language";
+import { initThemeSwitcher } from "./switch-theme";
+import { initTagFilter } from "./tag-filter";
+
+initProjects();
+initSortSelector();
+initLanguageSwitcher();
+initThemeSwitcher();
+initTagFilter();

@@ -29,13 +29,15 @@ function getPreferredTheme() {
     : lightTheme;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const theme = getPreferredTheme();
-  applyTheme(theme);
+export function initThemeSwitcher() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const theme = getPreferredTheme();
+    applyTheme(theme);
 
-  checkbox?.addEventListener("change", () => {
-    const next = checkbox.checked ? darkTheme : lightTheme;
-    localStorage.setItem(THEME_KEY, next);
-    applyTheme(next);
+    checkbox?.addEventListener("change", () => {
+      const next = checkbox.checked ? darkTheme : lightTheme;
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    });
   });
-});
+}

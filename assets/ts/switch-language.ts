@@ -1,10 +1,12 @@
-const languageSwitcher = document.getElementById(
-  "language-switcher",
-) as HTMLSelectElement;
+export function initLanguageSwitcher() {
+  const languageSwitcher = document.getElementById(
+    "language-switcher",
+  ) as HTMLSelectElement;
 
-languageSwitcher?.addEventListener("change", () => {
-  const value = languageSwitcher?.value;
-  if (value) {
-    window.location.href = value;
-  }
-});
+  languageSwitcher?.addEventListener("change", () => {
+    const value = languageSwitcher?.value;
+    if (value) {
+      window.location.href = value;
+    }
+  });
+}
