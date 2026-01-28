@@ -4,7 +4,7 @@ dev:
 
 gc:
   # Clean build cache.
-  rm -rf public resources
+  rm -rf public resources ./hugo_stats.json
 
 format:
   # Format code.
