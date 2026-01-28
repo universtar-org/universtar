@@ -1,3 +1,4 @@
+import { initHorizontalScroll } from "./horizontal-scroll";
 import { initProjects } from "./project-card";
 import { initSortSelector } from "./sorter";
 import { initLanguageSwitcher } from "./switch-language";
@@ -9,3 +10,4 @@ initSortSelector();
 initLanguageSwitcher();
 initThemeSwitcher();
 initTagFilter();
+initHorizontalScroll();
