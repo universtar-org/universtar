@@ -5,7 +5,7 @@
     <span>{{ .Site.Title }}</span>
   </a>
 
-  <div class="flex gap-4">
+  <div class="flex gap-2 md:gap-4">
     {{ if hugo.IsMultilingual }}
       {{ partial "language-switcher.html" . }}
     {{ end }}
