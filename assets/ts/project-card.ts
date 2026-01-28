@@ -2,14 +2,30 @@ export let projectList: HTMLElement | null;
 export let projectCards: HTMLDivElement[] = [];
 
 export class ProjectCard {
-  id: string;
-  star: number;
-  update: Date;
+  id: string = "";
+  stars: number = 0;
+  update: Date | null = null;
+  repo: string = "";
+  author: string = "";
+  description: string = "";
+  tags: string[] = [];
 
-  constructor(card: HTMLDivElement) {
+  [key: string]: any;
+
+  constructor(card: HTMLDivElement | Record<string, any>) {
     this.id = card.id;
-    this.star = Number(card.dataset.stars ?? 0);
-    this.update = new Date(card.dataset.update ?? "");
+    this.tags = ((card.dataset.tags ?? "") as string).split(",");
+
+    if ("dataset" in card) {
+      // Initialize from DOM.
+      this.update = new Date(card.dataset.update ?? "");
+      this.stars = Number(card.dataset.stars ?? 0);
+    } else {
+      // Initialize from JSON.
+      this.description = card.description;
+      this.repo = card.repo;
+      this.author = card.author;
+    }
   }
 }
 

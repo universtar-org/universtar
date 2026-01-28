@@ -11,6 +11,8 @@ export function initSortSelector() {
     projectCards.sort((a, b) => {
       const aCard = new ProjectCard(a);
       const bCard = new ProjectCard(b);
+      const aTime = aCard.update?.getTime() ?? 0;
+      const bTime = aCard.update?.getTime() ?? 0;
 
       switch (value) {
         case "star-desc": {
@@ -20,10 +22,10 @@ export function initSortSelector() {
           return aCard.star - bCard.star;
         }
         case "update-desc": {
-          return bCard.update.getTime() - aCard.update.getTime();
+          bTime - aTime;
         }
         default: {
-          return aCard.update.getTime() - bCard.update.getTime();
+          return aTime - bTime;
         }
       }
     });
