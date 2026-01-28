@@ -24,6 +24,10 @@
   {{ end }}
 {{ end }}
 
+{{ with .OutputFormats.Get "rss" }}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
 
 <title>{{ .Site.Title }}</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

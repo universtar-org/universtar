@@ -7,8 +7,13 @@ outputs:
   home:
     - HTML
     - JSON
+    - RSS
 
 copyright: © 2026 universtar.org
+
+services:
+  rss:
+    limit: -1
 
 params:
   heroTitle: "Universtar"
