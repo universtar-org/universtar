@@ -7,6 +7,8 @@ outputs:
     - HTML
     - JSON
 
+copyright: © 2026 universtar.org
+
 params:
   heroTitle: "Universtar"
   repoLink: "https://github.com/universtar-org/universtar"
