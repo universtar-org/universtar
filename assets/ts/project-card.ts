@@ -1,3 +1,4 @@
+import { DefaultSearchResults } from "flexsearch";
 import { HIDDEN_CLASS } from "./constants";
 
 export let projectList: HTMLElement | null;
@@ -41,11 +42,36 @@ export function initProjects() {
   );
 }
 
-export function updateProjectCards(activeTags: Set<string>) {
+export function updateProjectCards(activeTags: Set<string>): void;
+export function updateProjectCards(
+  ids: DefaultSearchResults,
+  displayAll?: boolean,
+): void;
+
+export function updateProjectCards(
+  arg: Set<string> | DefaultSearchResults,
+  displayAll: boolean = false,
+) {
+  if (arg instanceof Set) {
+    projectCards.forEach((card) => {
+      const tags = (card.dataset.tags ?? "").split(",");
+      const shouldShow = arg.has("All") || tags.some((tag) => arg.has(tag));
+      card.classList.toggle(HIDDEN_CLASS, !shouldShow);
+    });
+
+    return;
+  }
+
+  if (displayAll) {
+    projectCards.forEach((card) => card.classList.remove(HIDDEN_CLASS));
+    return;
+  }
+
   projectCards.forEach((card) => {
-    const tags = (card.dataset.tags ?? "").split(",");
-    const shouldShow =
-      activeTags.has("All") || tags.some((tag) => activeTags.has(tag));
-    card.classList.toggle(HIDDEN_CLASS, !shouldShow);
+    if (!arg.includes(card.id)) {
+      card.classList.add(HIDDEN_CLASS);
+    } else {
+      card.classList.remove(HIDDEN_CLASS);
+    }
   });
 }
