@@ -42,6 +42,6 @@ jobs:
       - name: Commit and Push Changes
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          git add themes/universtar ./.github/workflows
+          git add .
           git commit -m "github-actions[bot]: update the theme"
           git push
