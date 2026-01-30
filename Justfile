@@ -16,9 +16,8 @@ new path:
 
 update:
   # Update data.
-  cd ./tools/updater && \
-  go run ./cmd/updater/main.go ../../data/projects || exit 1 ; \
-  cd - > /dev/null
+  go install github.com/universtar-org/updater@latest
+  $(go env GOPATH)/bin/updater ./data/projects
 
 check:
   # Check YAML.

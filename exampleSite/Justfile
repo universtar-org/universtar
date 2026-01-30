@@ -1,6 +1,6 @@
 dev:
   # Start the server.
-  hugo server --buildDrafts --disableFastRender
+  hugo server --config ./dev.yaml --disableFastRender
 
 gc:
   # Clean build cache.
@@ -16,9 +16,8 @@ new path:
 
 update:
   # Update data.
-  cd ./tools/updater && \
-  go run ./cmd/updater/main.go ../../data/projects ; \
-  cd - > /dev/null
+  go install github.com/universtar-org/updater@latest
+  $(go env GOPATH)/bin/updater ./data/projects
 
 check:
   # Check YAML.
