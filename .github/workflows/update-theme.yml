@@ -26,7 +26,7 @@ jobs:
       - name: Update files
         run: |
           cp -r ./themes/universtar/.github/workflows ./.github/
-          cp ./themes/universtar/package* ./themes/universtar/flake* ./themes/universtar/*.js* ./themes/universtar/Justfile ./themes/universtar/CONTRIBUTING.md ./themes/universtar/.envrc ./themes/universtar/.gitignore ./themes/universtar/.prettierrc .
+          cp ./themes/universtar/package.json ./themes/universtar/tsconfig.json ./themes/universtar/flake* ./themes/universtar/*.js ./themes/universtar/Justfile ./themes/universtar/CONTRIBUTING.md ./themes/universtar/.envrc ./themes/universtar/.gitignore ./themes/universtar/.prettierrc .
 
       - name: Check for changes
         id: check_changes
