@@ -26,7 +26,7 @@ jobs:
       - name: Update files
         run: |
           cp -r ./themes/universtar/.github/workflows ./.github/workflows
-          cp -ar ./themes/universtar/exampleSite/. .
+          cp ./themes/universtar/package* ./themes/universtar/flake* ./themes/universtar/*.js* ./themes/universtar/Justfile ./themes/universtar/CONTRIBUTING.md ./themes/universtar/.envrc ./themes/universtar/.gitignore ./themes/universtar/.prettierrc .
 
       - name: Check for changes
         id: check_changes
@@ -42,6 +42,6 @@ jobs:
       - name: Commit and Push Changes
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          git add .
+          git add themes/universtar ./.github/workflows
           git commit -m "github-actions[bot]: update the theme"
           git push
