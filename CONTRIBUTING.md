@@ -4,12 +4,12 @@
 
 ```mermaid
 graph TD
-  main["<code>universtar-org/universtar</code>"]
+  main["universtar-org/universtar"]
   deploy["Deploy to GitHub Pages"]
   bind["Bind to Cooresponding Domain"]
 
-  main -->|Reuse the main repository| xmum["<code>universtar-org/xmum</code>"] --> deploy
-  main -->|Reuse the main repository| mit["<code>universtar-org/mit</code>"] --> deploy
+  main -->|Reuse the main repository| xmum["universtar-org/xmum"] --> deploy
+  main -->|Reuse the main repository| mit["universtar-org/mit"] --> deploy
   main -->|Reuse the main repository| dots[...] --> deploy
   deploy --> bind
 ```
