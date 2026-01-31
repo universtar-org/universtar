@@ -1,6 +1,6 @@
 dev:
   # Start the server.
-  hugo server --config ./dev.yaml --disableFastRender
+  hugo server --disableFastRender
 
 gc:
   # Clean build cache.
@@ -8,11 +8,7 @@ gc:
 
 format:
   # Format code.
-  prettier -w "./**/*.html" "./**/*.md"
-
-new path:
-  # Create new content.
-  hugo new content {{path}}
+  npx prettier -w "./**/*.html" "./**/*.md"
 
 update:
   # Update data.
