@@ -36,5 +36,6 @@ This project is built with the help of several excellent open-source tools and f
 - [Hugo](https://github.com/gohugoio/hugo) for static site generation
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styling
 - [Catppuccin](https://github.com/catppuccin/catppuccin) for color palette
+- [FlexSearch](https://github.com/nextapps-de/flexsearch?tab=readme-ov-file) for search function
 
 Special thanks to the open-source community for making these tools freely available.
