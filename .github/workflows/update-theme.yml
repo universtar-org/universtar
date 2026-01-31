@@ -1,5 +1,8 @@
 name: Update Theme
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 4 * * *" # Run at 4 a.m.
