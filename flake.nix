@@ -24,8 +24,7 @@
       shellHook = ''
         echo "Entering the development environment!"
         hugo version
-        npm install --save-dev prettier prettier-plugin-go-template tailwindcss @tailwindcss/cli @catppuccin/tailwindcss typescript
-        npm install flexsearch
+        npm install
       '';
     };
   };
