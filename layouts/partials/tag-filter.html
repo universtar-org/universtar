@@ -11,10 +11,7 @@
 {{ $allTags = $allTags | uniq | sort }}
 
 
-<div
-  id="horizontal-scroll"
-  class="pb-4 pt-2 max-w-full overflow-x-hidden flex-1"
->
+<div id="horizontal-scroll" class="pb-4 pt-2 max-w-full overflow-x-auto flex-1">
   <ul class="flex gap-1">
     <label for="all" data-tag="All" class="select-all-tags">
       <input type="checkbox" class="hidden" id="all" />
