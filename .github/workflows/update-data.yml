@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   check-format:
-    uses: ./.github/workflows/check-yaml-format.yml
+    uses: ./.github/workflows/check-yaml.yml
 
   update-data:
     runs-on: ubuntu-latest

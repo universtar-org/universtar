@@ -1,4 +1,4 @@
-name: "Check YAML Format"
+name: "Check YAML"
 
 on:
   pull_request:
@@ -17,8 +17,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo add-apt-repository ppa:longsleep/golang-backports
           sudo apt update
-          sudo apt install just yq
+          sudo apt install just yq golang-go
 
       - name: Check format
         run: |
