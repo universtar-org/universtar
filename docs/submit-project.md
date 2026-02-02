@@ -68,3 +68,9 @@ git push -u origin project/alice
 Go to GitHub and create a Pull Request titled `Add Projects`.
 
 Wait for maintainers to review and merge.
+
+## Add Description and Tags (Optional but Recommended)
+
+UniverStar fetches description and tags via GitHub REST API, and both of them can be configured at the `About` area of a repository.
+
+![About Area](./img/about-area.png)
