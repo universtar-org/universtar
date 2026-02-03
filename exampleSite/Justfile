@@ -1,6 +1,6 @@
 dev:
   # Start the server.
-  hugo server --disableFastRender
+  hugo server --config ./dev.yaml --disableFastRender
 
 gc:
   # Clean build cache.
@@ -12,11 +12,34 @@ format:
 
 update:
   # Update data.
-  go install github.com/universtar-org/tools/cmd/updater@latest
-  $(go env GOPATH)/bin/updater ./data/projects
+  curl -L -o updater https://github.com/universtar-org/tools/releases/latest/download/updater-linux-amd64
+  chmod +x updater
+  ./updater ./data/projects ; rm ./updater
+
+update-ci:
+  # Update data (CI).
+  curl -L -o updater https://github.com/universtar-org/tools/releases/latest/download/updater-linux-amd64
+  chmod +x updater
+  ./updater -v ./data/projects
+  rm ./updater
 
 check:
   # Check YAML.
   find ./data/projects -type f \( -name '*.yml' -o -name '*.yaml' \) -exec yq '.' {} \;
-  go install github.com/universtar-org/tools/cmd/checker@latest
-  $(go env GOPATH)/bin/checker ./data/projects
+  curl -L -o checker https://github.com/universtar-org/tools/releases/latest/download/checker-linux-amd64
+  chmod +x checker
+  ./checker ./data/projects ; rm ./checker
+
+check-ci:
+  # Check YAML (CI).
+  find ./data/projects -type f \( -name '*.yml' -o -name '*.yaml' \) -exec yq '.' {} \;
+  curl -L -o checker https://github.com/universtar-org/tools/releases/latest/download/checker-linux-amd64
+  chmod +x checker
+  ./checker -v ./data/projects
+  rm ./checker
+
+unique user:
+  # Check duplicated user.
+  curl -L -o unique https://github.com/universtar-org/tools/releases/latest/download/unique-linux-amd64
+  chmod +x unique
+  ./unique -v {{ user }} ; rm ./unique

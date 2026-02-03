@@ -23,4 +23,4 @@ jobs:
 
       - name: Check format
         run: |
-          just check
+          just check-ci

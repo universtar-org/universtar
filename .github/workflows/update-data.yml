@@ -37,7 +37,7 @@ jobs:
 
       - name: Run update
         run: |
-          just update
+          just update-ci
 
       - name: Check for changes
         id: check_changes
