@@ -107,8 +107,9 @@ Overall, this project is serverless, costless, and highly automatic.
    Update project data:
 
    ```bash
-   go install github.com/universtar-org/updater@latest
-   $(go env GOPATH)/bin/updater ./data/projects
+   curl -L -o updater https://github.com/universtar-org/tools/releases/latest/download/updater-linux-amd64
+   chmod +x updater
+   ./updater ./data/projects ; rm ./updater
    # Or
    just update
    ```
