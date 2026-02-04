@@ -39,90 +39,90 @@ Overall, this project is serverless, costless, and highly automatic.
 
 0. Fork, clone and enter the repository
 
-Create a [fork](https://github.com/universtar-org/universtar/fork) on GitHub.
+   Create a [fork](https://github.com/universtar-org/universtar/fork) on GitHub.
 
-Then,
+   Then,
 
-```bash
-git clone git@github.com:universtar-org/universtar.git
-cd universtar/
-```
+   ```bash
+   git clone git@github.com:universtar-org/universtar.git
+   cd universtar/
+   ```
 
-> Replace `universtar-org/universtar` with your forked repository.
+   > Replace `universtar-org/universtar` with your forked repository.
 
 1. Add Upstream
 
-```bash
-git remote add upstream https://github.com/universtar-org/universtar.git
-git fetch upstream
-```
+   ```bash
+   git remote add upstream https://github.com/universtar-org/universtar.git
+   git fetch upstream
+   ```
 
 2. Create a new branch (based on the `develop` branch)
 
-```bash
-git switch --create new-branch-name upstream/develop
-```
+   ```bash
+   git switch --create new-branch-name upstream/develop
+   ```
 
 3. Install dependencies
 
-For NixOS users, run one of the following command to enter dev shell.
+   For NixOS users, run one of the following command to enter dev shell.
 
-```bash
-direnv allow # With `direnv`
-nix develop # Without `direnv`
-```
+   ```bash
+   direnv allow # With `direnv`
+   nix develop # Without `direnv`
+   ```
 
-For other uses, run this command to install dependencies via `npm`:
+   For other uses, run this command to install dependencies via `npm`:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 4. Command list
 
-- Preview the website:
+   Preview the website:
 
-```bash
-hugo server --config ./dev.yaml --disableFastRender
-# Or
-just dev
-```
+   ```bash
+   hugo server --config ./dev.yaml --disableFastRender
+   # Or
+   just dev
+   ```
 
-- Clean build caches:
+   Clean build caches:
 
-```bash
-rm -rf public resources ./hugo_stats.json
-# Or
-just gc
-```
+   ```bash
+   rm -rf public resources ./hugo_stats.json
+   # Or
+   just gc
+   ```
 
-- Format files:
+   Format files:
 
-```bash
-npx prettier -w "./**/*.html" "./**/*.md"
-# Or
-just format
-```
+   ```bash
+   npx prettier -w "./**/*.html" "./**/*.md"
+   # Or
+   just format
+   ```
 
-- Update project data:
+   Update project data:
 
-```bash
-go install github.com/universtar-org/updater@latest
-$(go env GOPATH)/bin/updater ./data/projects
-# Or
-just update
-```
+   ```bash
+   go install github.com/universtar-org/updater@latest
+   $(go env GOPATH)/bin/updater ./data/projects
+   # Or
+   just update
+   ```
 
 5. Commit changes
 
-The commit message should follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+   The commit message should follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 6. Push changes
 
-```bash
-git push -u origin your/branch
-```
+   ```bash
+   git push -u origin your/branch
+   ```
 
 7. Open pull request
 
-All changes should be submitted to `develop` branch at first, so please remember to change the target branch in the pull request.
+   All changes should be submitted to `develop` branch at first, so please remember to change the target branch in the pull request.
