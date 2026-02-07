@@ -1,0 +1,56 @@
+name: Check Unique Project Users
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  unique-user:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get newly added project users
+        id: extract
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          users=$(curl -s \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "${{ github.api_url }}/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files?per_page=100" \
+          | jq -r '
+              .[]
+              | select(.status == "added")
+              | select(.filename | test("^data/projects/[^/]+\\.yaml$"))
+              | .filename
+            ' \
+          | sed 's|data/projects/||; s|\.yaml$||')
+
+          if [ -z "$users" ]; then
+            echo "No new project users added."
+            echo "users=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Found users:"
+          echo "$users"
+
+          {
+            echo "users<<EOF"
+            echo "$users"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Download unique tool
+        run: |
+          curl -L -o unique https://github.com/universtar-org/tools/releases/latest/download/unique-linux-amd64
+          chmod +x unique
+
+      - name: Check duplicated users
+        if: steps.extract.outputs.users != ''
+        run: |
+          echo "Checking users..."
+          while IFS= read -r user; do
+            ./unique -v "$user"
+          done <<< "${{ steps.extract.outputs.users }}"
