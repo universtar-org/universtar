@@ -1,6 +1,8 @@
 - repo: universtar
   stars: 0
-  description: ""
+  description: " A platform for university students to showcase and promote their projects. "
   tags:
   - HTML
-  updated_at: "2026-02-07T08:12:45Z"
+  - hugo
+  - universtar
+  updated_at: "2026-02-07T08:17:55Z"
