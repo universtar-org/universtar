@@ -16,6 +16,7 @@
         go
         gotools
         hugo
+        just
         nodejs
         yq
       ];
